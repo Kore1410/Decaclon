@@ -1,0 +1,33 @@
+.menu{
+    display: flex;
+    flex-direction: row;
+    align-items:flex-start;
+    gap: 3rem;
+    padding-left: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+ul{
+    list-style-type: none;
+}
+
+.menu a{
+    color: black;
+}
+
+.menu a:hover{
+    color: #0D83C3;
+}
+
+.nav-header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+    padding: 0 1rem 0 0;
+}
+
+.search-bar {
+    width: 40rem;
+    margin-left: 2rem;
+}

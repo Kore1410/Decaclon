@@ -1,10 +1,14 @@
-import Logo from "../Logo/Logo";
+
+
+import Layout from "../Layout";
+
+
 import './Header.css'
 
 function Header() {
     return (
        <header>
-            <Logo className="componentLogo" />
+            <Layout />
        </header>
         
     );

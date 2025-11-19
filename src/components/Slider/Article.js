@@ -6,19 +6,13 @@ import { useEffect, useState } from "react";
 function Article({price, imgArticles, title, description,num}) {
   let[products,setProducts] =useState([]);
 
-useEffect(
-      () => {
-          const options = {
-              method:'GET',
-          };
+useEffect(() => {
+    fetch('https://json-server-decaclon.onrender.com')
+        .then(response => response.json())
+        .then(data => setProducts(data))
+        .catch(err => console.error(err));
+}, []);
 
-          fetch('http://localhost:3000/products')
-              .then(response => response.json())
-              .then(data => setProducts(data))
-              .catch(err => console.error(err));
-      },
-      []
-  );
 
 
   return (

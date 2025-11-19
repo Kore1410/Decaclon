@@ -6,11 +6,19 @@ import { useEffect, useState } from "react";
 function Article({price, imgArticles, title, description,num}) {
   let[products,setProducts] =useState([]);
 
-useEffect(() => {
-  fetch("/api/products")
-    .then(res => res.json())
-    .then(data => setProducts(data));
-}, []);
+useEffect(
+      () => {
+          const options = {
+              method:'GET',
+          };
+
+          fetch('http://localhost:3000/products')
+              .then(response => response.json())
+              .then(data => setProducts(data))
+              .catch(err => console.error(err));
+      },
+      []
+  );
 
 
   return (

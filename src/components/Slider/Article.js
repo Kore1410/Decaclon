@@ -7,11 +7,12 @@ function Article({price, imgArticles, title, description,num}) {
   let[products,setProducts] =useState([]);
 
 useEffect(() => {
-    fetch('https://json-server-decaclon.onrender.com')
+    fetch('https://json-server-decaclon.onrender.com/products')
         .then(response => response.json())
         .then(data => setProducts(data))
         .catch(err => console.error(err));
 }, []);
+
 
 
 
